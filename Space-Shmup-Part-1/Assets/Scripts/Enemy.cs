@@ -31,13 +31,18 @@ public class Enemy : MonoBehaviour
     {
         Move(); 
 
-        if(!bndCheck.isOnScreen)
+        if(bndCheck.LocIs(BoundsCheck.eScreenLocs.offDown))
         {
-            if(pos.y < bndCheck.camHeight - bndCheck.radius)
-            {
-                Destroy(gameObject);
-            }
-        }  
+            Destroy(gameObject);
+        }
+
+        // if(!bndCheck.isOnScreen)
+        // {
+        //     if(pos.y < bndCheck.camHeight - bndCheck.radius)
+        //     {
+        //         Destroy(gameObject);
+        //     }
+        // }  
     }
     public virtual void Move()
     {

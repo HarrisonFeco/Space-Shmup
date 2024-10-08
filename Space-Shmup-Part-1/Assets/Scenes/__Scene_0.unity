@@ -315,6 +315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119dc8af2ce3d454abe2b88999720317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabEnemies:
+  - {fileID: 8969049224382945136, guid: 3fc5fd04a7bb8b44f90fb8e45c73f18f, type: 3}
+  enemySpawnPerSecond: 0.5
+  enemyInsetDefault: 1.5
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0

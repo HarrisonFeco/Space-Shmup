@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     public float health = 10;
     public int score = 100;
 
-    private BoundsCheck bndCheck;
+    protected BoundsCheck bndCheck;
+
 
     void Awake()
     {

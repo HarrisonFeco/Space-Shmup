@@ -851,6 +851,66 @@ MonoBehaviour:
   score: 100
   lifeTime: 10
   sinEccentricity: 0.6
+  rotCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.008656136
+      outSlope: 0.008656136
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.1022373
+      value: 0.00088497996
+      inSlope: 0.8389908
+      outSlope: 0.8389908
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.40123153
+      value: 0.5000037
+      inSlope: 0.8375497
+      outSlope: 0.8375497
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.60034287
+      value: 0.50115335
+      inSlope: 0.8309011
+      outSlope: 0.8309011
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9016161
+      value: 1.0000703
+      inSlope: 0.8276567
+      outSlope: 0.8276567
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.0007148881
+      outSlope: -0.0007148881
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   birthTime: 0
   p0: {x: 0, y: 0, z: 0}
   p1: {x: 0, y: 0, z: 0}

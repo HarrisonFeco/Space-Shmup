@@ -16,7 +16,7 @@ public class Sheild : MonoBehaviour
     }
 void Update()
     {
-        int currLevel = Mathf.FloorToInt(Hero.S.sheildLevel);
+        int currLevel = Mathf.FloorToInt(Hero.S.shieldLevel);
         if(levelShown != currLevel)
         {
             levelShown = currLevel;

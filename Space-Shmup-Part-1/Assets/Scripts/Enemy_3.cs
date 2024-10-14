@@ -11,14 +11,16 @@ public class Enemy_3 : Enemy
     public bool drawDebugInfo = true;
     [Header("Enemy_3 Private Fields")]
     [SerializeField]
-    private Vector3 [] points;
+    private Vector3[] points;
     [SerializeField]
     private float birthTime;
 
     void Start()
     {
         points = new Vector3[3];
+
         points[0] = pos;
+
         float xMin = -bndCheck.camWidth + bndCheck.radius;
         float xMax = bndCheck.camWidth - bndCheck.radius;
 
@@ -32,6 +34,7 @@ public class Enemy_3 : Enemy
         points[2].x = Random.Range(xMin, xMax);
 
         birthTime = Time.time;
+        
         if(drawDebugInfo) DrawDebug();
     }
 
@@ -46,6 +49,7 @@ public class Enemy_3 : Enemy
         }
 
         transform.rotation = Quaternion.Euler(u*180, 0, 0);
+
         u = u - 0.1f * Mathf.Sin(u*Mathf.PI*2);
         pos = Utils.Bezier(u, points);
     }

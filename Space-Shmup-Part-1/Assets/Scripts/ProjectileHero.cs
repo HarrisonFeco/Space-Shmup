@@ -40,7 +40,8 @@ public class ProjectileHero : MonoBehaviour
         rend.material.color = def.projectileColor;
     }
 
-    public Vector3 value{
+    public Vector3 vel
+    {
         get{return rigid.velocity;}
         set{rigid.velocity = value;}
     }

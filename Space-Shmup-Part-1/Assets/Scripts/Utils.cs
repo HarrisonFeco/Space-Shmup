@@ -12,11 +12,11 @@ public class Utils : MonoBehaviour
         {
             vArr[r,c] = points[c];
         }
-        for(r--;r>0;r--)
+        for(r--; r >= 0; r--)
         {
-            for(int c=0;c<=r;c++)
+            for(int c = 0; c <= r; c++)
             {
-                vArr[r,c] = Vector3.LerpUnclamped(vArr[r+1,c],vArr[r+1,c+1],u);
+                vArr[r,c] = Vector3.LerpUnclamped(vArr[r+1,c], vArr[r+1,c+1], u);
             }
         }
         return vArr[0,0];

@@ -273,6 +273,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf25489add32ad47a8d12a918dad782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  lifeTime: 5
+  midpointYRange: {x: 1.5, y: 3}
+  drawDebugInfo: 1
+  points: []
+  birthTime: 0
 --- !u!1001 &625015668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -588,7 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemies:
-  - {fileID: 8969049224382945136, guid: 3fc5fd04a7bb8b44f90fb8e45c73f18f, type: 3}
+  - {fileID: 4070209521177695457, guid: 1ab213efbbb64174897dfd47ede5d334, type: 3}
   enemySpawnPerSecond: 0.5
   enemyInsetDefault: 1.5
   gameRestartDelay: 2

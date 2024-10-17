@@ -30,7 +30,7 @@ public class Hero : MonoBehaviour
         {
             Debug.LogError("Hear.Awake() - Attempted to assign second Hero.s!");
         }
-        //fireEvent += TempFire;
+
         ClearWeapons();
         weapons[0].SetType(eWeaponType.blaster);
     }
@@ -51,18 +51,6 @@ public class Hero : MonoBehaviour
             fireEvent();
         }
     }
-
-    // void TempFire()
-    // {
-    //     GameObject projGO = Instantiate<GameObject>(projectilePrefab);
-    //     projGO.transform.position = transform.position;
-    //     Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
-       
-    //    ProjectileHero proj = projGO.GetComponent<ProjectileHero>();
-    //    proj.type = eWeaponType.blaster;
-    //    float tSpeed = Main.GET_WEAPON_DEFINITION(proj.type).velocity;
-    //    rigidB.velocity = Vector3.up * tSpeed;
-    // }
 
     void OnTriggerEnter(Collider other)
     {

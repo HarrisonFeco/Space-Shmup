@@ -82,7 +82,7 @@ MonoBehaviour:
     letter: 
     powerUpColor: {r: 1, g: 1, b: 1, a: 1}
     weaponModelPrefab: {fileID: 0}
-    projectilePrefab: {fileID: 0}
+    projectilePrefab: {fileID: 1935201416552582906, guid: 91507d6d3e8d7734c9a3d872830360b3, type: 3}
     projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 0
     damagePerSec: 0

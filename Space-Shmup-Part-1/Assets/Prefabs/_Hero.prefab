@@ -199,6 +199,7 @@ MonoBehaviour:
   pitchMult: 30
   projectilePrefab: {fileID: 1935201416552582906, guid: 91507d6d3e8d7734c9a3d872830360b3, type: 3}
   projectileSpeed: 40
+  weapons: []
 --- !u!1001 &2969578752021166299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -359,6 +360,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2644263078101836801}
     m_Modifications:
+    - target: {fileID: 6181937162434773332, guid: eddd1dc8551c29a43b9257d9867c22a9, type: 3}
+      propertyPath: _type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6477889534070418286, guid: eddd1dc8551c29a43b9257d9867c22a9, type: 3}
       propertyPath: m_Name
       value: Weapon

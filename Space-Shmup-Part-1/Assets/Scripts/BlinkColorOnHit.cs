@@ -46,7 +46,7 @@ public class BlinkColorOnHit : MonoBehaviour
             SetColors();
         }
     }
-    void SetColors()
+    public void SetColors()
     {
         foreach(Material m in materials)
         {

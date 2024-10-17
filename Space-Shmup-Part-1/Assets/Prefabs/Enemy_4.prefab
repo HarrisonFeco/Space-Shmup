@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7817639879985021274}
   - component: {fileID: 9185519999970266969}
   - component: {fileID: 8574527006731025607}
+  - component: {fileID: 3839830136606149634}
   m_Layer: 0
   m_Name: enemy4_shield_Front
   m_TagString: Untagged
@@ -194,6 +195,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b081f271844cc4db6d825dbc243bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+--- !u!114 &3839830136606149634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893663533348302636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db90cbe0fe3c6448ab86dd59af2ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
+  ignoreOnCollisionEnter: 0
 --- !u!1 &3440084670684215098
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +473,7 @@ GameObject:
   - component: {fileID: 5407094474805554665}
   - component: {fileID: 9185519999970266967}
   - component: {fileID: 2756489122124707706}
+  - component: {fileID: 5090262011436497688}
   m_Layer: 0
   m_Name: enemy4_shield_Right
   m_TagString: Untagged
@@ -554,6 +572,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b081f271844cc4db6d825dbc243bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+--- !u!114 &5090262011436497688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079837839100941336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db90cbe0fe3c6448ab86dd59af2ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
+  ignoreOnCollisionEnter: 0
 --- !u!1 &5609913661129515232
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8715376467510569145}
   - component: {fileID: 6573768591230172630}
+  - component: {fileID: 9221011448118335092}
   m_Layer: 0
   m_Name: enemy4
   m_TagString: Untagged
@@ -855,6 +890,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b081f271844cc4db6d825dbc243bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+--- !u!114 &9221011448118335092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338674280845046275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db90cbe0fe3c6448ab86dd59af2ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
+  ignoreOnCollisionEnter: 0
 --- !u!1 &8842888835611369128
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +1002,7 @@ GameObject:
   - component: {fileID: 4346281909414164491}
   - component: {fileID: 9185519999970266968}
   - component: {fileID: 1242754739960006807}
+  - component: {fileID: 7864092884438145463}
   m_Layer: 0
   m_Name: enemy4_shield_Left
   m_TagString: Untagged
@@ -1049,6 +1101,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b081f271844cc4db6d825dbc243bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10
+--- !u!114 &7864092884438145463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9166194616976959728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8db90cbe0fe3c6448ab86dd59af2ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showingColor: 0
+  blinkCompleteTime: 0
+  ignoreOnCollisionEnter: 0
 --- !u!1 &9185519998980853174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd47dd5a38efba2429f378b0b880f262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  powerUpDropChance: 1
+  duration: 4
 --- !u!114 &-8368956217239542781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,8 +1217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e912c8675ac35b04b8e0ef132f27cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boundsType: 2
-  radius: 2.5
+  boundsType: 1
+  radius: 8
   keepOnScreen: 0
   screenLocs: 0
   camWidth: 0
@@ -1163,6 +1237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showingColor: 0
   blinkCompleteTime: 0
+  ignoreOnCollisionEnter: 0
 --- !u!114 &5652117869267348753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1175,3 +1250,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b081f271844cc4db6d825dbc243bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10

@@ -14,7 +14,7 @@ public class EnemyShield : MonoBehaviour
     void Start()
     {
         blinker = GetComponent<BlinkColorOnHit>();
-        bnlinker.ignoreOnCollisionEnter = true;
+        blinker.ignoreOnCollisionEnter = true;
 
         if(transform.parent == null) return;
         EnemyShield shieldParent = transform.parent.GetComponent<EnemyShield>();

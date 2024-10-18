@@ -17,8 +17,15 @@ public class Enemy : MonoBehaviour
 
     void start()
     {
-        GameObject scoreGO = GameObject.Find("ScoreCounter");
-        scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+        // GameObject scoreGO = GameObject.Find("ScoreCounter");
+        // scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+
+        scoreCounter = FindObjectOfType<ScoreCounter>();
+    
+        if (scoreCounter == null)
+        {
+            Debug.LogError("ScoreCounter component not found in the scene.");
+        }
     }
     void Awake()
     {
@@ -37,6 +44,20 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
+        if (scoreCounter == null)
+        {
+            GameObject scoreGO = GameObject.Find("ScoreCounter");
+            if (scoreGO != null)
+            {
+                scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+                Debug.Log("ScoreCounter reassigned in Update.");
+            }
+            else
+            {
+                Debug.LogError("ScoreCounter GameObject not found in scene.");
+            }
+        }
+        
         Move(); 
 
         if(bndCheck.LocIs(BoundsCheck.eScreenLocs.offDown))
@@ -58,21 +79,12 @@ public class Enemy : MonoBehaviour
         tempPos.y -= speed * Time.deltaTime;
         pos = tempPos;
     }
-    // void OnCollisionEnter( Collision coll)
-    // {
-    //     GameObject otherGO = coll.gameObject;
-    //     if(otherGO.GetComponent<ProjectileHero>() != null)
-    //     {
-    //         Destroy(otherGO);
-    //         Destroy(gameObject);
-    //     }
-    //     else
-    //     {
-    //         Debug.Log("Enemy hit by non-ProjectileHero: "+otherGO.name);        
-    //     }
-    // }
     void OnCollisionEnter(Collision coll)
     {
+        if (scoreCounter == null)
+        {
+            Debug.LogError("ScoreCounter is null before collision logic.");
+        }
         GameObject otherGO = coll.gameObject;
         ProjectileHero p = otherGO.GetComponent<ProjectileHero>();
         if(p != null)
@@ -86,16 +98,17 @@ public class Enemy : MonoBehaviour
                     {
                         calledShipDestroyed = true;
                         Main.SHIP_DESTROYED(this);
+                        scoreCounter.score += 100;
                     }
                     Destroy(this.gameObject);
                 }
             }
             Destroy(otherGO);
-            scoreCounter.score += 100;
         }
         else
         {
             print("Enemy hit by non-ProjectileHero: " + otherGO.name);
         }
     }
+
 }

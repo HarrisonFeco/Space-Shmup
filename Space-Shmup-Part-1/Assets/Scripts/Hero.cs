@@ -93,6 +93,10 @@ public class Hero : MonoBehaviour
                     {
                         weap.SetType(pUp.type);
                     }
+                    else
+                    {
+                        Debug.LogWarning("No empty weapon slot available for: " + pUp.type);
+                    }
                 }
                 else
                 {

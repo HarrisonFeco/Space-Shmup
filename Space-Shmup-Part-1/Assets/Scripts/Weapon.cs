@@ -83,6 +83,13 @@ public class Weapon : MonoBehaviour
             this.gameObject.SetActive(true);
         }
         def = Main.GET_WEAPON_DEFINITION(_type);
+
+        if (def == null || def.weaponModelPrefab == null)
+        {
+            Debug.LogError($"No WeaponDefinition found for {wt} or prefab is not assigned.");
+            return;
+        }
+
         if(weaponModel != null) Destroy(weaponModel);
         weaponModel = Instantiate<GameObject>(def.weaponModelPrefab, transform);
         weaponModel.transform.localPosition = Vector3.zero;

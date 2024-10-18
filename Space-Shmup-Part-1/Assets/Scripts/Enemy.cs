@@ -10,12 +10,16 @@ public class Enemy : MonoBehaviour
     public float health = 10;
     public int score = 100;
     public float powerUpDropChance = 1f;
+    public ScoreCounter scoreCounter;
 
-    
     protected bool calledShipDestroyed = false;
     protected BoundsCheck bndCheck;
 
-
+    void start()
+    {
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+    }
     void Awake()
     {
         bndCheck = GetComponent<BoundsCheck>();
@@ -87,6 +91,7 @@ public class Enemy : MonoBehaviour
                 }
             }
             Destroy(otherGO);
+            scoreCounter.score += 100;
         }
         else
         {

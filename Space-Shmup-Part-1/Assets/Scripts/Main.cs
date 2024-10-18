@@ -21,8 +21,7 @@ public class Main : MonoBehaviour
         eWeaponType.blaster, eWeaponType.blaster,
         eWeaponType.spread, eWeaponType.shield
     };
-    
-
+    public ScoreCounter scoreCounter;
     private BoundsCheck bndCheck; 
 
     void Awake()
@@ -36,6 +35,22 @@ public class Main : MonoBehaviour
         foreach( WeaponDefinition def in weaponDefinitions)
         {
             WEAP_DICT[def.type] = def;
+        }
+    }
+    void Update()
+    {
+        if (scoreCounter == null)
+        {
+            GameObject scoreGO = GameObject.Find("ScoreCounter");
+            if (scoreGO != null)
+            {
+                scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+                Debug.Log("ScoreCounter reassigned in Update.");
+            }
+            else
+            {
+                Debug.LogError("ScoreCounter GameObject not found in scene.");
+            }
         }
     }
     public void SpawnEnemy()
@@ -72,6 +87,7 @@ public class Main : MonoBehaviour
     void Restart()
     {
         SceneManager.LoadScene("Game_Over");
+        HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
     }
 
     static public void HERO_DIED()

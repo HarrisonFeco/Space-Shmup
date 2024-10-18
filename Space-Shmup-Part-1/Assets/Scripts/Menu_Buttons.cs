@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class Menu_Buttons : MonoBehaviour
 {
     public string sceneName;
-    public int lvl;
-
 
     void Start()
     {

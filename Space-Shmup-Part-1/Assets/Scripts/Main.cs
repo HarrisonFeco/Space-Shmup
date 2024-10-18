@@ -71,7 +71,7 @@ public class Main : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene("Space_Shmup");
+        SceneManager.LoadScene("Game_Over");
     }
 
     static public void HERO_DIED()
